@@ -7,3 +7,4 @@ Title of Project: Project for Unix
 
 **Date and Time Jan 15 2018 12:45pm**
 
+The guessinggame.sh file contains: **25** lines of code
