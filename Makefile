@@ -11,7 +11,7 @@ README.md:
     echo “##Title of Project: Project for Unix## ”>>README.md
     echo “**Date and Time:   **” >>README.md
     date %c >>README.md
-    wc -l guessinggame.sh >>README.md
+    echo "The guessinggame.sh file contains: **`wc -l < guessinggame.sh`** lines of code" >> README.md  
   
 clean:
     rm text1.txt
