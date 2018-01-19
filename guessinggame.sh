@@ -1,32 +1,27 @@
-#!/bin/bash
-# File: guessinggame.sh
 
 numfiles=$(( ls -1 | wc -l ))
+echo "Guess how many files are in this folder!"
 
-echo "Guess how many files are in the current folder!"
-
-guess="-1"
-
+number="-1"
 function countFilesInDir ()
 {
     ls -1 | wc -l
 }
 
-
-while [[ $(countFilesInDir) != $guess ]]
+while [[ $(countFilesInDir) != $number ]]
 do
-    read guess
-    if ! [[ "$guess" =~ ^[0-9]+$ ]]
+    read number
+    if ! [[ "$number" =~ ^[0-9]+$ ]]
     then
-        echo "Invalid input! Please try again!"
+        echo "Invalid input. Please try again"
 
-    elif (( guess > $(countFilesInDir) ))
+    elif (( number > $(countFilesInDir) ))
     then
-        echo "The number is too high. please try again!:"
+        echo "The number is too high. Please try again"
 
-    elif (( guess < $(countFilesInDir) ))
+    elif (( number < $(countFilesInDir) ))
     then
-        echo "The number is too low. please try again!:"
+        echo "The number is too low. Please try again"
 
     else
         echo "Correct"
