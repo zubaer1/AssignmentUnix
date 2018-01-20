@@ -1,5 +1,5 @@
 
-numfiles=$(( ls -1 | wc -l ))
+numfile=$(( ls -1 | wc -l ))
 echo "Guess how many files are in this folder!"
 
 number="-1"
